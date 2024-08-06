@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.ControlStock">
+   <children>
+      <Label layoutX="61.0" layoutY="84.0" text="Identificador" />
+      <TextField fx:id="txtId" layoutX="54.0" layoutY="101.0" />
+      <Label layoutX="61.0" layoutY="142.0" text="Nombre del Producto" />
+      <TextField fx:id="txtNombre" layoutX="54.0" layoutY="159.0" />
+      <Label layoutX="61.0" layoutY="200.0" text="Stock" />
+      <TextField fx:id="txtStock" layoutX="54.0" layoutY="217.0" />
+      <TableView fx:id="tvStock" layoutX="238.0" layoutY="59.0" onMouseClicked="#onMouseClickedTabla" prefHeight="294.0" prefWidth="330.0">
+        <columns>
+          <TableColumn fx:id="col_Id" prefWidth="108.0" text="Identificador" />
+          <TableColumn fx:id="col_Nombre" prefWidth="141.60003662109375" text="Nombre del Producto" />
+            <TableColumn fx:id="col_Stock" prefWidth="80.7999267578125" text="Stock" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnAgregar" layoutX="54.0" layoutY="270.0" mnemonicParsing="false" onAction="#agregarStock" text="Agregar" />
+      <Button fx:id="btnModificar" layoutX="143.0" layoutY="270.0" mnemonicParsing="false" onAction="#ModifStock" text="Modificar" />
+      <Button fx:id="btnBuscar" layoutX="103.0" layoutY="328.0" mnemonicParsing="false" onAction="#buscarTabla" prefHeight="25.0" prefWidth="66.0" text="Buscar" />
+   </children>
+</Pane>
